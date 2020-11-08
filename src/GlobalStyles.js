@@ -17,7 +17,7 @@ function GlobalStyles() {
 
           #root {
             display: grid;
-            grid-template-rows: auto;
+            grid-template-rows: 1fr 1fr;
             height: 100%;
             width: 100%;
             margin: 0;
