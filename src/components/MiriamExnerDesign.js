@@ -18,6 +18,9 @@ export default function MiriamExnerDesign() {
 const Container = styled.a`
   display: flex;
   background: var(--mse-bg);
+  :hover {
+    opacity: 0.9;
+  }
 `;
 
 const MSEWrapper = styled.div`

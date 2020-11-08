@@ -22,6 +22,9 @@ export default function Quizzme() {
 const Container = styled.a`
   display: flex;
   background: linear-gradient(to right, var(--quiz-5-2), var(--quiz-5-1));
+  :hover {
+    opacity: 0.7;
+  }
 `;
 
 const QuizzMeWrapper = styled.div`
