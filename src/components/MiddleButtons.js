@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import github from '../graphics/github2.svg';
+import { motion } from 'framer-motion';
 
 export default function MiddleButtons() {
   return (
@@ -11,7 +12,7 @@ export default function MiddleButtons() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GitHublogo src={github} />
+          <GitHublogo src={github} animate={{ scale: 2 }} transition={{ duration: 3.5 }} />
         </GitHubLogoBackground>
       </Container>
     </>
@@ -27,6 +28,7 @@ const Container = styled.div`
   left: 0;
   right: 0;
   margin: auto;
+  z-index: 100;
 `;
 
 const GitHubLogoBackground = styled.a`
@@ -38,12 +40,9 @@ const GitHubLogoBackground = styled.a`
   width: 3.5em;
   height: 3.5em;
   margin: auto;
-  :hover {
-    transform: scale(2);
-  }
   outline: none;
 `;
 
-const GitHublogo = styled.img`
-  width: 3.5em;
+const GitHublogo = styled(motion.img)`
+  width: 1.75em;
 `;

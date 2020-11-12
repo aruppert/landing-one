@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <Quizzme />
       <MiddleButtons />
+      <Quizzme />
       <MiriamExnerDesign />
     </>
   );
