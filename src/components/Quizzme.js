@@ -14,7 +14,7 @@ export default function Quizzme() {
         whileTap={{ y: '45vh', zIndex: 200 }}
         transition={{
           delay: 1,
-          default: { duration: 5 },
+          default: { duration: 3.5 },
         }}
       >
         <QuizzMePositioner>
