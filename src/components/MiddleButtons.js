@@ -1,25 +1,30 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import github from '../graphics/github2.svg';
-import { motion } from 'framer-motion';
+import mail from '../graphics/mail.svg';
 
 export default function MiddleButtons() {
   return (
     <>
       <Container>
-        <GitHubLogoBackground
+        <ButtonBackground
           href="https://github.com/aruppert/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GitHublogo src={github} animate={{ scale: 2 }} transition={{ duration: 3.5 }} />
-        </GitHubLogoBackground>
+          <GitHublogo src={github} />
+        </ButtonBackground>
+        <ButtonBackground href="mailto:aruppert@pm.me" type="email">
+          <MailIcon src={mail} />
+        </ButtonBackground>
       </Container>
     </>
   );
 }
 
 const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 3.5em;
   position: absolute;
@@ -28,21 +33,28 @@ const Container = styled.div`
   left: 0;
   right: 0;
   margin: auto;
-  z-index: 100;
+  z-index: 300;
 `;
 
-const GitHubLogoBackground = styled.a`
+const ButtonBackground = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(0deg, var(--quiz-5-1), var(--quiz-5-2) 50%, var(--mse-bg) 50%);
+  background: white;
+  -webkit-box-shadow: 0px 0px 2px 3px #fff;
+  box-shadow: 0px 0px 2px 3px #fff;
   border-radius: 50%;
   width: 3.5em;
   height: 3.5em;
-  margin: auto;
+  margin: 0 10vw;
   outline: none;
 `;
 
-const GitHublogo = styled(motion.img)`
-  width: 1.75em;
+const GitHublogo = styled.img`
+  width: 3.5em;
+  transform: translateX(-1%);
+`;
+
+const MailIcon = styled(GitHublogo)`
+  transform: none;
 `;
