@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import GlobalStyles from './GlobalStyles';
 import Quizzme from './components/Quizzme';
 import MiriamExnerDesign from './components/MiriamExnerDesign';
@@ -9,9 +10,13 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <MiddleButtons />
-      <Quizzme />
-      <MiriamExnerDesign />
+      <Router>
+        <Route path="*">
+          <MiddleButtons />
+          <Quizzme />
+          <MiriamExnerDesign />
+        </Route>
+      </Router>
     </>
   );
 }
